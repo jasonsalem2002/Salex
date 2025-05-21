@@ -35,7 +35,10 @@ def check_payload(payload):
         return False
 
 def create_payload(payload , payload_name, payload_host, payload_port):
-    file = open('paylaod.txt', 'w')
+    # The output filename was misspelled as 'paylaod.txt', which results in an
+    # incorrectly named file being created.  Use the correct spelling so the
+    # generated payload is stored in 'payload.txt'.
+    file = open('payload.txt', 'w')
     file.write(f"{payload}")
     file.write(f"\n{payload_name}")
     file.write(f"\n{payload_host}")

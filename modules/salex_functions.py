@@ -40,7 +40,8 @@ def machine_os():
         print("Failed To Get The Machine Os")
 
 def clear():
+    """Clear the terminal screen regardless of platform."""
     if machine_os() == "Windows":
-        clear = os.system("cls")
+        os.system("cls")
     else:
-        clear = os.system("clear")
+        os.system("clear")

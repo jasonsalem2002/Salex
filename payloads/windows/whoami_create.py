@@ -21,7 +21,9 @@ def check_payload(payload):
         return False
 
 def create_payload(payload , payload_name, payload_host, payload_port):
-    file = open('paylaod.txt', 'w')
+    # Correct the misspelled output file name so generated payloads are
+    # consistently written to 'payload.txt'.
+    file = open('payload.txt', 'w')
     file.write(f"{payload}")
     file.write(f"\n{payload_name}")
     file.write(f"\n{payload_host}")
